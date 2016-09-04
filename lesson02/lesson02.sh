@@ -26,3 +26,11 @@ echo_eval curl https://api.github.com/users/octocat
 
 pause
 echo_eval curl -i https://api.github.com/users/octocat
+
+
+pause
+echo_eval http https://api.github.com/users/octocat
+
+
+pause
+echo_eval "curl https://api.github.com/users/octocat | jq -r '.name'"
