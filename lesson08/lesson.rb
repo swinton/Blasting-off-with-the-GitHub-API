@@ -5,7 +5,8 @@ client = Octokit::Client.new :netrc => true
 
 # Protect branch
 repo = 'universetrainingday/Blasting-off-with-the-GitHub-API'
-protection = {
+branch = 'protected-branch'
+options = {
     :required_status_checks => {
       :include_admins => true,
       :strict => true,
@@ -17,10 +18,9 @@ protection = {
         'allthedoll'
       ],
       :teams => []
-    }
-}
-# Because this is a preview API:
-options = {
+    },
+    # Because this is a preview API:
     :accept => 'application/vnd.github.loki-preview+json'
 }
-response = client.protect_branch(repo, 'protected-branch', protection, options)
+response = client.put "#{Octokit::Repository.path repo}/branches/#{branch}/protection", options
+puts response
