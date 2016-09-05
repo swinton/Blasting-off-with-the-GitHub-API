@@ -26,5 +26,8 @@ git push origin master:protected-branch
 ```
 2. Protect that branch
 ```
-http PUT api.github.com/repos/universetrainingday/Blasting-off-with-the-GitHub-API/branches/protected-branch/protection Accept:application/vnd.github.loki-preview+json < protected.json
+http PUT \
+    https://api.github.com/repos/universetrainingday/Blasting-off-with-the-GitHub-API/branches/protected-branch/protection \
+    Accept:application/vnd.github.loki-preview+json \
+    < protection.json
 ```
