@@ -3,7 +3,7 @@
       "include_admins": true,
       "strict": true,
       "contexts": [
-      ]      
+      ]
     },
     "restrictions": {
       "users": [
@@ -13,5 +13,4 @@
       "teams": [
       ]
     }
-
 }
