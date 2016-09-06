@@ -3,6 +3,9 @@ New to API development? Come and get a boost with this guided tour of the GitHub
 
 ## Lessons
 
+### Lesson 0
+In which we provide an overview of API, Why Even API, stuff about the GitHub API?
+
 ### Lesson 1
 Using the browser, make a few unauthenticated requests, talk about JSON, point out the JSONView extension for Chrome.
 
