@@ -1,7 +1,7 @@
 # Blasting Off with the GitHub API :rocket:
 New to API development? Come and get a boost with this guided tour of the GitHub API. You'll learn what's possible, and pick up some reusable code you can apply to your own projects, while following best practices.
 
-## Lessons
+## :rocket: Launch
 
 ### Lesson 0
 - What is an API?
@@ -9,6 +9,7 @@ New to API development? Come and get a boost with this guided tour of the GitHub
 - Why use the GitHub API?
 - Introduction to the GitHub API
 
+## :earth_americas: Orbit
 ### Lesson 1
 - Making requests
   - Interacting with the API
@@ -48,6 +49,7 @@ New to API development? Come and get a boost with this guided tour of the GitHub
   - Configure a webhook to call your web app
     - Test it by changing something on GitHub
 
+## :octocat: Flight
 ### Lesson 9
 - Other resources exposed by the GitHub API
 
