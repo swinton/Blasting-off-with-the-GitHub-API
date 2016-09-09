@@ -4,39 +4,61 @@ New to API development? Come and get a boost with this guided tour of the GitHub
 ## Lessons
 
 ### Lesson 0
-In which we provide an overview of API, Why Even API, stuff about the GitHub API?
+- What is an API?
+- Why even API?
+- Why use the GitHub API?
+- Introduction to the GitHub API
 
 ### Lesson 1
-Using the browser, make a few unauthenticated requests, talk about JSON, point out the JSONView extension for Chrome.
-
+- Making requests
+  - Interacting with the API
+  
 ### Lesson 2
-Make similar API requests using the command line, e.g. `curl`. Talk about alternative tools, e.g. [HTTPie](http://httpie.org/), [`jq`](https://stedolan.github.io/jq/). Talk about response headers vs. the body.
+- Diving a little deeper
+  - More on that command line, though
+  - Some example requests with cURL
 
 ### Lesson 3
-Talk about rate-limiting, demonstrate using `ab`. Talk about rate limits when authenticated vs. not.
+- Rate limits
+  - Bummer
+- Authentication
+  - Sweet
 
 ### Lesson 4
-Talk about authentication, basic, OTP, OAuth, personal access tokens. How to generate them, how to store them, how to use them. Generate a personal access token. Set up a `~/.netrc`, talk about how HTTPie will automatically use this.
-
+- Authentication
+  - OAuth
+  - Personal access tokens
+  
 ### Lesson 5
-Show a Bash script, that leverages HTTPie and jq to audit everyone who has access to a repository, generate a CSV report.
+- Use a bash script that leverages HTTPie and jq to audit user access to a repository
+  - Generate a CSV report
 
 ### Lesson 6
-Introduce Octokit. Show some boilerplate code for using Octokit that also references the `~/.netrc`. Use `irb` to show how useful it is to interact with the API. Set up a `~/.irbrc` that instantiates an Octokit client automatically.
+- Oktokit!
+  - [https://github.com/octokit/octokit.rb](https://github.com/octokit/octokit.rb)
 
 ### Lesson 7
-Create a script that creates a daily log of all my GitHub activity (`daily_ships.rb`). Convert the script into a web app, e.g. using Sinatra.
+- Create a script that creates a daily log of all your GitHub activity
+  - dailyships.rb
+    - Convert the script into a web app
 
 ### Lesson 8
-Configure a webhook to call your web app, using [`lt`](https://localtunnel.github.io/www/) to expose your local app to the web. Let the web app respond to a webhook event by changing something on GitHub, e.g. protect a branch based on some naming convention.
+- What is a webhook and why is it not an API?
+- Webhooks and GitHub
+  - Configure a webhook to call your web app
+    - Test it by changing something on GitHub
 
 ### Lesson 9
-Talk about other resources exposed by the GitHub API.
+- Other resources exposed by the GitHub API
 
 ### Lesson 10
-Talk about other useful tools for API development, e.g.
-
-- [httpbin.org](https://httpbin.org/)
-- [ngrok](https://ngrok.com/)
-- [Charles](https://www.charlesproxy.com/)
-- …
+- Other useful tools for API development
+  - httpbin.org
+    - https://httpbin.org/
+    -HTTP request and response service
+  - ngrok 
+    - https://ngrok.com/
+    - Secure tunnels to localhost
+  - Charles
+    - https://www.charlesproxy.com/
+    - HTTP proxy / HTTP monitor / Reverse proxy to view all HTTP and SSL/HTTPS traffic
