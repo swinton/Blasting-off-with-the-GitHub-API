@@ -1,5 +1,8 @@
 # Lesson 06
 
+## Leveling up with Octokit
+Introduce Octokit. Show some boilerplate code for using Octokit that also references the `~/.netrc`. Use `irb` to show how useful it is to interact with the API. Set up a `~/.irbrc` that instantiates an Octokit client automatically.
+
 
 ## IRB
 Consider adding the following to your `~/.irbrc`:
