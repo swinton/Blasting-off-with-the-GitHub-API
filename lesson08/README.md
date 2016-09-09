@@ -1,5 +1,7 @@
 # Lesson 08
 
+Configure a webhook to call your web app, using [`lt`](https://localtunnel.github.io/www/) to expose your local app to the web. Let the web app respond to a webhook event by changing something on GitHub, e.g. protect a branch based on some naming convention.
+
 ## Resources
 - https://developer.github.com/webhooks/
 - https://developer.github.com/v3/activity/events/types/#createevent
