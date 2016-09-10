@@ -1,0 +1,29 @@
+#!/bin/bash
+
+pause() {
+    if [ -z "$1" ]
+    then
+        echo ""
+        echo ""
+        echo "Press enter to continue..."
+    fi
+    read
+}
+
+echo_eval() {
+    clear
+    echo $@
+    pause -
+    eval $@
+}
+
+echo_eval cat netrc.example
+
+pause
+echo_eval ls -l ~/.netrc
+
+pause
+echo_eval http --body https://api.github.com/rate_limit
+
+pause
+echo_eval "http --body https://api.github.com/rate_limit | jq '.rate.remaining'"
