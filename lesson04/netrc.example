@@ -1,0 +1,8 @@
+# Replace YOUR_PERSONAL_ACCESS_TOKEN with, you know, your personal access token
+# Copy to ~/.netrc
+#   cp netrc.example ~/.netrc
+# Change file mode to allow read / write by owner only
+#   chmod 600 ~/.netrc
+machine api.github.com
+    login swinton
+    password YOUR_PERSONAL_ACCESS_TOKEN
