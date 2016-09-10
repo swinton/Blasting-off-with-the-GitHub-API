@@ -10,5 +10,11 @@ client = Octokit::Client.new :netrc => true
 # Get events for the current user
 events = client.user_events(client.user.login)
 
-# Let's take a look at the most recent event
-puts JSON.pretty_generate(events[0].to_attrs)
+# How many events?
+puts "I got #{events.length} events."
+
+# Let's go grab some more events
+events.concat(client.last_response.rels[:next].get.data)
+
+# How many events?
+puts "I got #{events.length} events."

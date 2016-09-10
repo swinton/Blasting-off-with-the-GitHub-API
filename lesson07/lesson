@@ -1,0 +1,28 @@
+#!/bin/bash
+
+pause() {
+    if [ -z "$1" ]
+    then
+        echo ""
+        echo ""
+        echo "Press enter to continue..."
+    fi
+    read
+}
+
+echo_eval() {
+    clear
+    highlight -O xterm256 --syntax ruby --style solarized-dark $1
+    echo ""
+    echo "--"
+    pause -
+    ruby $1
+}
+
+echo_eval lesson.a.rb
+
+pause
+echo_eval lesson.b.rb
+
+pause
+echo_eval lesson.c.rb
