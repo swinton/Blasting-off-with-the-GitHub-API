@@ -12,13 +12,15 @@ client = Octokit::Client.new :netrc => true
 events = client.user_events client.user.login
 
 # Trim events to those generated today
-today = [Time.now.day,
-         Time.now.month,
-         Time.now.year]
+class Time
+    def today?()
+        [self.day, self.month, self.year] ==
+        [Time.now.day, Time.now.month, Time.now.year]
+    end
+end
+
 todays_events = events.select do |ev|
-    today == [ev[:created_at].day,
-              ev[:created_at].month,
-              ev[:created_at].year]
+    ev[:created_at].today?
 end
 
 # TODO
