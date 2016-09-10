@@ -2,4 +2,7 @@
 require 'octokit'
 
 # Super simple example: https://api.github.com/zen
-puts Octokit.get "zen"
+response = Octokit.get "zen"
+
+# Just echo the response
+puts "Response: #{response}"

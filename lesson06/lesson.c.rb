@@ -12,7 +12,7 @@ whoami = client.user
 # Let's inspect some response headers...
 
 # How many requests remaining?
-remaining = client.last_response.headers['x-ratelimit-remaining'].to_i
+remaining = client.rate_limit.remaining
 
 # When does it reset?
 reset = client.last_response.headers['x-ratelimit-reset'].to_i
