@@ -1,6 +1,28 @@
 #!/bin/bash
 
-http PUT \
-    https://api.github.com/repos/universetrainingday/Blasting-off-with-the-GitHub-API/branches/protected-branch/protection \
-    Accept:application/vnd.github.loki-preview+json \
-    < protection.json
+pause() {
+    if [ -z "$1" ]
+    then
+        echo ""
+        echo ""
+        echo "Press enter to continue..."
+    fi
+    read
+}
+
+echo_eval() {
+    clear
+    highlight -O xterm256 --syntax ruby --style solarized-dark $1
+    echo ""
+    echo "--"
+    pause -
+    ruby $1
+}
+
+open https://github.com/universetrainingday/Blasting-off-with-the-GitHub-API/settings/branches
+
+pause
+echo_eval lesson.a.rb
+
+pause
+open https://github.com/universetrainingday/Blasting-off-with-the-GitHub-API/settings/branches

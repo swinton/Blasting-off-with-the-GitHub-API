@@ -3,7 +3,10 @@ require 'octokit'
 
 client = Octokit::Client.new :netrc => true
 
-# Protect branch
+# Update branch protection API
+# https://developer.github.com/v3/repos/branches/#update-branch-protection
+
+# Let's protect the 'protected-branch' branch...
 repo = 'universetrainingday/Blasting-off-with-the-GitHub-API'
 branch = 'protected-branch'
 options = {
@@ -22,5 +25,10 @@ options = {
     # Because this is a preview API:
     :accept => 'application/vnd.github.loki-preview+json'
 }
+
+# Use the lower-level Octokit API methods, because rubygems...
 response = client.put "#{Octokit::Repository.path repo}/branches/#{branch}/protection", options
-puts response
+
+if client.last_response.status == 200
+    puts "Branch protected!!! 🎉 "
+end
