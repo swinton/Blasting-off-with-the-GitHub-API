@@ -17,8 +17,17 @@ echo_eval() {
     eval $@
 }
 
-echo_eval ab -n 60 -c 10 "https://api.github.com/zen"
+# No penalty for hitting /rate_limit
+echo_eval curl https://api.github.com/rate_limit
+pause
+echo_eval "curl https://api.github.com/rate_limit | jq '.rate.remaining'"
+pause
+echo_eval "curl https://api.github.com/rate_limit | jq '.rate.remaining'"
+pause
+echo_eval "curl https://api.github.com/rate_limit | jq '.rate.remaining'"
 
-
+# Penalized for hitting a resource, e.g. /zen
 pause
 echo_eval curl -i https://api.github.com/zen
+pause
+echo_eval "curl https://api.github.com/rate_limit | jq '.rate.remaining'"
