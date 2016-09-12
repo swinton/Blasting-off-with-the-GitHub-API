@@ -1,5 +1,14 @@
 # Blasting Off with the GitHub API :rocket:
-New to API development? Come and get a boost with this guided tour of the GitHub API. You'll learn what's possible, and pick up some reusable code you can apply to your own projects, while following best practices.
+
+We'll be blasting off with the GitHub API in San Francisco, on **September 13<sup>th</sup>**, **2016**, at **[GitHub Universe Training Day](githubuniverse.com/program/#training)**.
+
+Come along and get a head start with our guided tour of the GitHub API.
+
+You'll learn what's possible, and pick up some reusable code you can apply to your own projects, while following best practices.
+
+## Running the lessons
+
+To run the lessons in this repo, navigate to the corresponding lesson sub-directory and run the `lesson` script within (e.g. to run Lesson 08: `cd lesson08 && ./lesson`).
 
 ## :rocket: Launch
 
