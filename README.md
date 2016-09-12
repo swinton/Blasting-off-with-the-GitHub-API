@@ -20,32 +20,28 @@ To run the lessons in this repo, navigate to the corresponding lesson sub-direct
 
 ## :earth_americas: Orbit
 ### Lesson 1
-- Making requests
+- Making requests with your browser
   - Interacting with the API
-  
+
 ### Lesson 2
 - Diving a little deeper
   - More on that command line, though
   - Some example requests with cURL
 
 ### Lesson 3
-- Rate limits
-  - Bummer
-- Authentication
-  - Sweet
+- Raising rate limits
+    - Rate limits are a fact of life in the wonderful world of APIs, here's how to live in harmony with them
 
 ### Lesson 4
-- Authentication
-  - OAuth
-  - Personal access tokens
-  
+- Being authentic with the API
+    - Different authentication methods
+    - Generating and storing a personal access token
+
 ### Lesson 5
-- Use a bash script that leverages HTTPie and jq to audit user access to a repository
-  - Generate a CSV report
+- Let's command line some more with our new friends, `HTTpie` and `jq`! :tada:
 
 ### Lesson 6
-- Oktokit!
-  - [https://github.com/octokit/octokit.rb](https://github.com/octokit/octokit.rb)
+- Let's [Octokit](https://github.com/octokit/octokit.rb)! :boom:
 
 ### Lesson 7
 - Create a script that creates a daily log of all your GitHub activity
@@ -64,12 +60,19 @@ To run the lessons in this repo, navigate to the corresponding lesson sub-direct
 
 ### Lesson 10
 - Other useful tools for API development
-  - httpbin.org
-    - https://httpbin.org/
-    -HTTP request and response service
-  - ngrok 
-    - https://ngrok.com/
-    - Secure tunnels to localhost
-  - Charles
-    - https://www.charlesproxy.com/
-    - HTTP proxy / HTTP monitor / Reverse proxy to view all HTTP and SSL/HTTPS traffic
+    - Paw
+        - https://paw.cloud/
+        - Feature-rich API client (MacOS only)
+    - Postman
+        - ?URL?
+        - Another feature-rich API client, available cross-platform, as a Chrome extension
+    - ngrok
+        - https://ngrok.com/
+        - Secure tunnels to localhost
+    - Charles
+        - https://www.charlesproxy.com/
+        - HTTP proxy / HTTP monitor / Reverse proxy to view all HTTP and SSL/HTTPS traffic
+    - HTTPbin
+        - https://httpbin.org/
+        - HTTP request and response service, useful for validating what you're sending to an API
+        - :warning: Be careful not to leak your access token
