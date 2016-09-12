@@ -1,35 +1,14 @@
-# Lesson 08
+# :earth_americas: Lesson 08
 
-Configure a webhook to call your web app, using [`lt`](https://localtunnel.github.io/www/) to expose your local app to the web. Let the web app respond to a webhook event by changing something on GitHub, e.g. protect a branch based on some naming convention.
+## WebHooked
 
-## Resources
-- https://developer.github.com/webhooks/
-- https://developer.github.com/v3/activity/events/types/#createevent
-- https://developer.github.com/v3/repos/branches/#update-branch-protection
+Until now, we've been _reading_ data from GitHub, which is great, but we can do a lot more than that :muscle:
 
+In this lesson, we'll _write_ some data to GitHub via the API, thereby _enhancing_ the default GitHub behavior. We'll also get and up running with a real, live WebHook example, an important component of the GitHub platform, and a crucial part of being successful with the GitHub API.
 
-## Update branch protection
+### Lessons
 
-To access the Protected Branch API during the preview period, you must provide a custom media type in the `Accept` header:
-
-```
-application/vnd.github.loki-preview+json
-```
-
-https://developer.github.com/v3/repos/branches/#update-branch-protection
-
-```
-PUT /repos/:owner/:repo/branches/:branch/protection
-```
-
-1. Create a new branch, `protected-branch`
-```
-git push origin master:protected-branch
-```
-2. Protect that branch
-```
-http PUT \
-    https://api.github.com/repos/universetrainingday/Blasting-off-with-the-GitHub-API/branches/protected-branch/protection \
-    Accept:application/vnd.github.loki-preview+json \
-    < protection.json
-```
+1. Unveiling the (currently in preview) branch protection API
+2. Preparing for WebHooks with a simple Sinatra server
+3. Exposing our Sinatra server to the interwebs
+4. Putting it all together
