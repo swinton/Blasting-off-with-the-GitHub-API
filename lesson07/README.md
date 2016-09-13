@@ -1,7 +1,11 @@
-# Lesson 07
+# :earth_americas: Lesson 07
 
-## Daily ships script
-Create a script that creates a daily log of all my GitHub activity (`daily_ships.rb`). Convert the script into a web app, e.g. using Sinatra.
+## MOAR `Octokit.rb`
 
-## Resources
-- https://developer.github.com/v3/activity/events/#list-events-performed-by-a-user
+In which we get to know Octokit a little better, taking a look at pagination, and some more concrete examples.
+
+### Lessons
+
+1. Taking a first look at our GitHub activity using [the _events_ endpoint](https://developer.github.com/v3/activity/events/#list-events-performed-by-a-user)
+2. Demonstrating how we do pagination
+3. A more complete example, grabbing all the stuff we did today on GitHub

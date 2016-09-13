@@ -1,20 +1,12 @@
-# Lesson 06
+# :earth_americas: Lesson 06
 
-## Leveling up with Octokit
-Introduce Octokit. Show some boilerplate code for using Octokit that also references the `~/.netrc`. Use `irb` to show how useful it is to interact with the API. Set up a `~/.irbrc` that instantiates an Octokit client automatically.
+## Let's Octokit! :octocat:
 
+In which we introduce [Octokit](https://github.com/octokit/) (specifically, the [Ruby](https://ruby-lang.org) flavor,  [Octokit.rb](https://github.com/octokit/octokit.rb/)) and get our hands dirty with some actual code.
 
-## IRB
-Consider adding the following to your `~/.irbrc`:
+### Lessons
 
-```ruby
-require 'octokit'
-
-class Object
-    def github
-        Octokit::Client.new :netrc => true
-    end
-end
-```
-
-Then in `irb`, you can just start using the API straight away, via `github`.
+1. A simple example leveraging Octokit.rb, demonstrating the lower level programming interface for interacting with the API
+2. An authentication example, using the `~/.netrc` we generated earlier
+3. Demonstrating reading rate limit information via Octokit
+4. Demonstrating interacting with the API via IRB
