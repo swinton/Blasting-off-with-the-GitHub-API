@@ -19,6 +19,7 @@ echo_eval() {
     ruby $1
 }
 
+
 echo_eval lesson.a.rb
 
 pause
@@ -26,3 +27,7 @@ echo_eval lesson.b.rb
 
 pause
 echo_eval lesson.c.rb
+
+pause
+echo_eval lesson.d.rb
+irb

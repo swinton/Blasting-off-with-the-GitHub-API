@@ -37,31 +37,31 @@ To run the lessons in this repo, navigate to the corresponding lesson sub-direct
     - Different authentication methods
     - Generating and storing a personal access token
 
-### Lesson 6
+### Lesson 5
 - Let's [Octokit](https://github.com/octokit/octokit.rb)! :boom:
 
-### Lesson 7
+### Lesson 6
 - Create a script that creates a daily log of all your GitHub activity
   - dailyships.rb
     - Convert the script into a web app
 
-### Lesson 8
+### Lesson 7
 - What is a webhook and why is it not an API?
 - Webhooks and GitHub
   - Configure a webhook to call your web app
     - Test it by changing something on GitHub
 
 ## :octocat: Flight
-### Lesson 9
+### Lesson 8
 - Other resources exposed by the GitHub API
 
-### Lesson 10
+### Lesson 9
 - Other useful tools for API development
     - Paw
         - https://paw.cloud/
         - Feature-rich API client (MacOS only)
     - Postman
-        - ?URL?
+        - https://www.getpostman.com/
         - Another feature-rich API client, available cross-platform, as a Chrome extension
     - ngrok
         - https://ngrok.com/

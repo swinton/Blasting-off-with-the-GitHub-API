@@ -1,25 +1,38 @@
 #!/usr/bin/env ruby
 require 'octokit'
+require 'json'
 require 'date'
 
-# This time, with authentication
+# Monkey patch Time class, give it a `today?` method
+class Time
+    def today?()
+        [self.day, self.month, self.year] ==
+        [Time.now.day, Time.now.month, Time.now.year]
+    end
+end
+
 client = Octokit::Client.new :netrc => true
 
-# Make a request
-# Who am I again?
-whoami = client.user
+# What did I do today?
+# https://developer.github.com/v3/activity/events/#list-events-performed-by-a-user
 
-# Let's inspect some response headers...
+# Get events for the current user
+events = client.user_events(client.user.login)
 
-# How many requests remaining?
-remaining = client.rate_limit.remaining
+# Select just today's events
+todays_events = events.select { |ev| ev[:created_at].today? }
 
-# When does it reset?
-reset = client.last_response.headers['x-ratelimit-reset'].to_i
+# Get ALL of today's events, even those on another "page"
+n_requests = 0
+while todays_events.length == (events.length + (n_requests * 30)) && \
+        client.last_response.rels[:next] && \
+        client.rate_limit.remaining > 0
+    # Get more events
+    events = client.last_response.rels[:next].get
+    todays_events.concat(events.select { |ev| ev[:created_at].today? })
+    # Increment no. of subsequent "page" requests we've made
+    n_requests += 1
+end
 
-# How many minutes away is that?
-reset = Time.at(reset).to_datetime
-now = Time.now.to_datetime
-minutes = ((reset - now) * 24 * 60).to_i
-
-puts "Remaining requests: #{remaining}.\nResets in #{minutes} minutes."
+# Report on events
+puts "I did #{todays_events.length} things on GitHub today."

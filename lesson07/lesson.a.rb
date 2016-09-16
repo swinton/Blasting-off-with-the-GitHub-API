@@ -1,14 +1,34 @@
 #!/usr/bin/env ruby
 require 'octokit'
-require 'json'
 
 client = Octokit::Client.new :netrc => true
 
-# What did I do today?
-# https://developer.github.com/v3/activity/events/#list-events-performed-by-a-user
+# Update branch protection API
+# https://developer.github.com/v3/repos/branches/#update-branch-protection
 
-# Get events for the current user
-events = client.user_events(client.user.login)
+# Let's protect the 'protected-branch' branch...
+repo = 'universetrainingday/Blasting-off-with-the-GitHub-API'
+branch = 'protected-branch'
+options = {
+    :required_status_checks => {
+      :include_admins => true,
+      :strict => true,
+      :contexts => []
+    },
+    :restrictions => {
+      :users => [
+        'swinton',
+        'allthedoll'
+      ],
+      :teams => []
+    },
+    # Because this is a preview API:
+    :accept => 'application/vnd.github.loki-preview+json'
+}
 
-# Let's take a look at the most recent event
-puts JSON.pretty_generate(events[0].to_attrs)
+# Use the lower-level Octokit API methods, because rubygems...
+response = client.put "#{Octokit::Repository.path repo}/branches/#{branch}/protection", options
+
+if client.last_response.status == 200
+    puts "Branch protected!!! 🎉 "
+end

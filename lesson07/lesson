@@ -19,10 +19,44 @@ echo_eval() {
     ruby $1
 }
 
+kill_lesson() {
+    kill $( pgrep -f "ruby $1" )
+}
+
+open https://github.com/universetrainingday/Blasting-off-with-the-GitHub-API/settings/branches
+
+pause
 echo_eval lesson.a.rb
 
 pause
-echo_eval lesson.b.rb
+open https://github.com/universetrainingday/Blasting-off-with-the-GitHub-API/settings/branches
 
 pause
-echo_eval lesson.c.rb
+echo "Now, with webhooks... 😮 "
+
+pause
+echo_eval lesson.b.rb &
+
+pause
+kill_lesson lesson.b.rb
+
+pause
+echo_eval lesson.c.rb &
+
+pause
+open https://blastingoff.localtunnel.me/
+
+pause
+open https://github.com/universetrainingday/Blasting-off-with-the-GitHub-API/settings/hooks/new
+
+pause
+kill_lesson lesson.c.rb
+
+pause
+echo_eval lesson.d.rb &
+
+pause
+kill_lesson lesson.d.rb
+
+pause
+open https://github.com/universetrainingday/Blasting-off-with-the-GitHub-API/settings/branches
