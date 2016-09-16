@@ -37,9 +37,6 @@ To run the lessons in this repo, navigate to the corresponding lesson sub-direct
     - Different authentication methods
     - Generating and storing a personal access token
 
-### Lesson 5
-- Let's command line some more with our new friends, `HTTpie` and `jq`! :tada:
-
 ### Lesson 6
 - Let's [Octokit](https://github.com/octokit/octokit.rb)! :boom:
 
