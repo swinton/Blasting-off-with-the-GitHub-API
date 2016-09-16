@@ -1,4 +1,4 @@
-# :earth_americas: Lesson 06
+# :earth_americas: Lesson 05
 
 ## Let's Octokit! :octocat:
 

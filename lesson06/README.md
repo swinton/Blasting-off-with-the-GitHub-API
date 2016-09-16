@@ -1,4 +1,4 @@
-# :earth_americas: Lesson 07
+# :earth_americas: Lesson 06
 
 ## MOAR `Octokit.rb`
 
