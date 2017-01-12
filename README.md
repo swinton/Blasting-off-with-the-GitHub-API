@@ -1,8 +1,8 @@
 # Blasting Off with the GitHub API :rocket:
 
-We'll be blasting off with the GitHub API in San Francisco, on **September 13<sup>th</sup>**, **2016**, at **[GitHub Universe Training Day](githubuniverse.com/program/#training)**.
+We [blasted off with the GitHub API](https://vimeo.com/187090493/63178811e6) in San Francisco, on **September 13<sup>th</sup>**, **2016**, at **[GitHub Universe Training Day](githubuniverse.com/program/#training)**.
 
-Come along and get a head start with our guided tour of the GitHub API.
+Check out [the Vimeo recording](https://vimeo.com/187090493/63178811e6), and get a head start with our guided tour of the GitHub API.
 
 You'll learn what's possible, and pick up some reusable code you can apply to your own projects, while following best practices.
 
