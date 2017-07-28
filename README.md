@@ -8,7 +8,7 @@ You'll learn what's possible, and pick up some reusable code you can apply to yo
 
 ## Running the lessons
 
-To run the lessons in this repo, navigate to the corresponding lesson sub-directory and run the `lesson` script within (e.g. to run Lesson 08: `cd lesson03 && ./lesson`).
+To run the lessons in this repo, navigate to the corresponding lesson sub-directory and run the `lesson` script within (e.g. to run Lesson 08: `cd lesson08 && ./lesson`).
 
 ## :rocket: Launch
 
